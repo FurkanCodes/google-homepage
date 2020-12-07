@@ -1,112 +1,53 @@
-<style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  
-  .searchbutton {
- 
-background-color: rgb(248, 249, 250);
-border-bottom-color: rgb(248, 249, 250);
-border-bottom: 4px 4px;
 
-border-bottom-style: solid;
-border-bottom-width: 1px;
-border-image-outset: 0;
-border-image-repeat: stretch;
-border-image-slice: 100%;
-border-image-source: none;
-border-image-width: 1;
-border-left-color: rgb(248, 249, 250);
-border-left-style: solid;
-border-left-width: 1px;
-border-right-color: rgb(248, 249, 250);
-border-right-style: solid;
-border-right-width: 1px;
-border-top-color: rgb(248, 249, 250);
-border: 4px 4px;
-border-top-style: solid;
-border-top-width: 1px;
-color: rgb(60, 64, 67);
-cursor: pointer;
-font-family: arial, sans-serif;
-font-size: 14px;
-height: 36px;
-line-height: 27px;
-margin: 11px 4px 11px 4px;
-min-width: 54px;
-padding: 0px 16px 0px 16px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Google</title>
 
-  }
-  .searchbutton:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .nav {
-     font-family: "Arial", Sans, serif;
-    font-size: 13px;
-    margin-top: 25px;
-    height: 40px;
-
-  }
-  .nav ul {
-  text-align: right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  
- 
-  }
-  .nav li {
-   display: inline;
- margin: 8px;
-   
-    
-  }
-  a {
-    color: #565656;
-     text-decoration: none;
-  }
-    a:hover {
-    color: #565656;
-     text-decoration: underline;
-  }
-
-  li img {
-    border-radius: 100px;
-
-  }
-  
-  .search {
-    padding-top: 50px !important;
-  height: 72px;
-width: auto;
-  }
-  
-</style>
-
-
+  <link rel="stylesheet" href="styles/main.css" /> </head>
 
 <html>
     <body>
+      <!-- Navigation -->
       <div class="nav">
       <ul> 
   <li><a href="www.gmail.com">Gmail</a></li>
   <li><a href="search.asp"> Images</a></li>
+  <li class="nav__item nav__item--app">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="37" width="26" height="26"/><rect width="26" height="26"/><rect x="74" width="26" height="26"/><rect x="37" y="37" width="26" height="26"/><rect y="37" width="26" height="26"/><rect x="74" y="37" width="26" height="26"/><rect x="37" y="74" width="26" height="26"/><rect y="74" width="26" height="26"/><rect x="74" y="74" width="26" height="26"/></svg>
   <li> <a href="link"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu-QAFu7tab20USSCNBnn1AzcimyFH1Rpl-zG-U0=s32-c-mo"> </a> </li>
-
+  
 </ul>
   </div>
-     <div class="search">
-      
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo" class="center">
-        <input type="text" placeholder="Search.." class="center">
 
-      <center><button type="button" class="searchbutton">Search in Google</button> 
-      <button type="button" class="searchbutton">Feeling Lucky</button> </center> <!-- find a way to put magnifier inside -->
-      </div>
+  <!-- MAIN SEARCH-->
+     
+      <div class="main_logo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo" class="center">
+     </div>
+
+
+<div class="wrapper">
+       
+  <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+    <input placeholder="Search"
+            type="text" 
+            class="search"> 
+    <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+    
+    </div>
+  
+
+   
+  <center><button type="submit" type="button" class="searchbuttons" >Search in Google</button> 
+  <button type="button" class="searchbuttons" > I'm Feeling Lucky</button> </center> <!-- find a way to put magnifier inside -->
+  
+
+
+
       <footer> 
         
       </footer>
