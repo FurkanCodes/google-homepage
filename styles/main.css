@@ -1,9 +1,17 @@
 
 
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+ 
 
 }
 
@@ -216,4 +224,18 @@ width: auto;
 
 
 /* Footer */
-
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #e4e4e4;
+  background-color: #f2f2f2;
+margin-top: 373px;
+}
+.footer div ul {
+  list-style: none;
+  display: flex;
+}
+.footer div ul li {
+  padding-left: 27px;
+}
