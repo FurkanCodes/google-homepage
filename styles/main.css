@@ -14,11 +14,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
   }
 
     #main_subs button{
       background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
-      background-color: #f2f2f2;
+   
       border: 1px solid #f2f2f2;
       border-radius: 4px;
       color: #5F6368;
@@ -106,73 +107,94 @@ display: inline;
   height: 72px;
 width: auto;
 }
+/* contains the whole search bar */
+.search_container {
+  --searchbox-height: 44px;
+  margin: 0 auto 0 auto;
+  min-width: 410px;
+  width: var(--content-width);
+}
+/* searchbar  */
 
-.wrapper {
+.searchbar {
+  background-color: transparent;
+  cursor: text;
+  margin: 0 auto;
+  max-width: 584px;
+  outline: black;
+  border: 1px solid #dfe1e5;
+  border-radius: 22px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: var(--searchbox-height);
   position: relative;
-  display: flex;
-  min-width: 100px;
-  
 }
 
-.search {
-  border: 1px solid white;
-  border-radius: 50px;
-  height: 25px;
-  width: 20%;
-  padding: 2px 23px 2px 30px;
-  
-  background-color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom-color: rgb(16, 16, 16);
-border-bottom-style: none;
-border-bottom-width: 0px;
-border-image-outset: 0;
-border-image-repeat: stretch;
-border-image-slice: 100%;
-border-image-source: none;
-border-image-width: 1;
-border-left-color: rgb(16, 16, 16);
-border-left-style: none;
-border-left-width: 0px;
-border-right-color: rgb(16, 16, 16);
-border-right-style: none;
-border-right-width: 0px;
-border-top-color: rgb(16, 16, 16);
-border-top-style: none;
-border-top-width: 0px;  
-box-sizing: border-box;
-color: rgb(16, 16, 16);
-font-family: Noto Sans;
-font-size: 16px;
-height: 37px;
 
-text-align: center;
-width: 494px
-  
+
+
+.search_input {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  width: calc(100% - 80px);
+  border-color: transparent;
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  line-height: 44px;
+  margin: auto 0;
+  overflow: hidden;
+  text-align: initial;
+  text-overflow: ellipsis;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.fa {
+.search_input:focus {
+  outline: transparent;
+}
+
+.search_input:focus::placeholder {
+  color: transparent;
+}
+
+.search_icon_wrapper {
+  padding: 0 24px;
+}
+
+.search_icon {
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzVGNjM2OCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 20px;
+  background-color: rgb(14, 14, 14);
+  bottom: 0;
+  left: 16px;
+  margin: auto;
   position: absolute;
-  width: 142px;
-  padding-right: 240px;
-
-
+  top: 0;
+  width: 24px;
 }
 
-.clear-icon {
-  position: absolute;
-  top: 9px;
-  right: 8px;
-  width: 12px;
+
+
+
+.search_microphone {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjxwYXRoIGZpbGw9IiM0Mjg1RjQiIGQ9Ik0xMiAxNWMxLjY2IDAgMi45OS0xLjM0IDIuOTktM0wxNSA1YzAtMS42Ni0xLjM0LTMtMy0zUzkgMy4zNCA5IDV2N2MwIDEuNjYgMS4zNCAzIDMgM3oiLz48cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTEgMTguOTJoMlYyMmgtMnoiLz48cGF0aCBmaWxsPSIjRjRCNDAwIiBkPSJNNyAxMkg1YzAgMS45My43OCAzLjY4IDIuMDUgNC45NWwxLjQxLTEuNDFDNy41NiAxNC42MyA3IDEzLjM4IDcgMTJ6Ii8+PHBhdGggZmlsbD0iI0VBNDMzNSIgZD0iTTEyIDE3Yy0xLjM4IDAtMi42My0uNTYtMy41NC0xLjQ3bC0xLjQxIDEuNDFBNi45OSA2Ljk5IDAgMCAwIDEyLjAxIDE5YzMuODcgMCA2Ljk4LTMuMTQgNi45OC03aC0yYzAgMi43Ni0yLjIzIDUtNC45OSA1eiIvPjwvc3ZnPg==) no-repeat center;
+  background-size: 21px 21px;
+  bottom: 0;
   cursor: pointer;
-  visibility: hidden;
-  
+  margin-inline-end: 16px;
+  padding: 22px 12px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 21px;
+  border-color: transparent;
 }
 
-.search:hover, .search:focus {
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  border-color: rgba(223, 225, 229, 0);
-  
+.searchbar:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    
 }
-
